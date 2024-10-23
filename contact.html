@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Rashed's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Contact Section Styling */
+    .contact-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%); /* Matching background */
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .contact-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-header p {
+      font-size: 1.2rem;
+      color: #dddddd;
+      margin-bottom: 2rem;
+    }
+
+    .contact-header a {
+      color: #007bff; /* Email link color */
+      text-decoration: none;
+    }
+
+    .contact-header a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Form Styling */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-form label {
+      font-size: 1rem;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #333333;
+      border: none;
+      border-radius: 5px;
+      color: #ffffff;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .contact-form input::placeholder, .contact-form textarea::placeholder {
+      color: #888888;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: 2px solid #007bff;
+    }
+
+    .submit-button {
+      background-color: #007bff;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .submit-button:hover {
+      background-color: #005f99;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Hover shadow */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-section {
+        padding: 3rem 1rem;
+      }
+
+      .contact-header h2 {
+        font-size: 2rem;
+      }
+
+      .contact-form {
+        gap: 1rem;
+      }
+
+      .contact-form input, .contact-form textarea {
+        font-size: 0.9rem;
+      }
+
+      .submit-button {
+        padding: 0.7rem 1.5rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <h1>Rashed Alsafadi</h1>
+    </div>
+    <div class="nav-center">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.linkedin.com/in/rashed-alsafadi/" target="_blank">
+        <img src="C:\Users\rashe\Downloads\linkedin.png" alt="LinkedIn" class="icon">
+      </a>
+            <a href="#"><img src="C:\Users\rashe\Downloads\github.png" alt="GitHub" class="icon"></a>
+      <a href="#" class="resume-button">Resume</a>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-header">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out through the form below or email me directly at <a href="mailto:rashedsafadii7@gmail.com">rashedsafadii7@gmail.com</a>.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Link to external JavaScript file for contact page -->
+  <script src="contact.js"></script>
+
+</body>
+</html>

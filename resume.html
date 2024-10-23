@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rashed's Resume</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Navigation Bar */
+  nav {
+  position: relative; /* This ensures it follows the document flow and is not fixed */
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  background-color: rgba(31, 28, 44, 0.9); /* Transparent background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+  nav .nav-left h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  nav .nav-center ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  nav .nav-center ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+
+  nav .nav-center ul li a:hover {
+    color: #928dab; /* Hover effect */
+  }
+
+  nav .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  nav .nav-right .icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav .nav-right .icon:hover {
+    transform: scale(1.2); /* Subtle hover effect */
+  }
+
+  .resume-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem 3rem;
+  margin: 4rem 0;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section (My Resume) */
+.resume-left {
+  flex: 1;
+  text-align: left;
+  padding-right: 2rem;
+}
+
+.resume-left h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+/* Right Section (Content) */
+.resume-right {
+  flex: 2;
+  padding-left: 2rem;
+}
+
+/* Resume Section (Title and Arrow) */
+.resume-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444444;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.section-title:hover {
+  color: #928dab;
+}
+
+.section-title .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.active .arrow {
+  transform: rotate(180deg);
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.resume-section.active .section-content {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.resume-section p, .resume-section ul {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.resume-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .resume-container {
+      flex-direction: column;
+    }
+    .resume-right {
+      padding-left: 0;
+      margin-top: 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-left">
+      <h1>Rashed Alsafadi</h1>
+    </div>
+    <div class="nav-center">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.linkedin.com/in/rashed-alsafadi/" target="_blank">
+        <img src="C:\Users\rashe\Downloads\linkedin.png" alt="LinkedIn" class="icon">
+      </a>
+      <a href="#"><img src="C:\Users\rashe\Downloads\github.png" alt="GitHub" class="icon"></a>
+      <a href="#" class="resume-button"> Resume</a>
+    </div>
+  </nav>
+
+  <!-- Main Section (Two Columns) -->
+  <section class="resume-container">
+    <!-- Left Side (Resume Title) -->
+    <div class="resume-left">
+      <h2>My Resume</h2>
+    </div>
+
+    <!-- Right Side (Resume Content) -->
+    <div class="resume-right">
+      <div class="resume-section">
+        <h3 class="section-title">Education <span class="arrow">&#9660;</span></h3>
+        <div class="section-content">
+          <p><strong>University of XYZ</strong> - Class of 2024</p>
+          <p>Bachelor of Science in Computer Science</p>
+          <p>GPA: 3.85</p>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h3 class="section-title">Work Experience <span class="arrow">&#9660;</span></h3>
+        <div class="section-content">
+          <p><strong>Software Developer Intern</strong> @ ABC Company (June 2022 - Aug 2022)</p>
+          <p>Worked on various web development projects, including front-end and back-end tasks, using HTML, CSS, JavaScript, and Node.js.</p>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h3 class="section-title">Leadership & Extracurriculars <span class="arrow">&#9660;</span></h3>
+        <div class="section-content">
+          <p>President of University XYZ Coding Club (2021-2022)</p>
+          <p>Led a team of students to organize coding workshops and hackathons.</p>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h3 class="section-title">Skills <span class="arrow">&#9660;</span></h3>
+        <div class="section-content">
+          <ul>
+            <li>JavaScript, HTML, CSS</li>
+            <li>Node.js, Express.js</li>
+            <li>MySQL, MongoDB</li>
+            <li>Git, GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="resume.js"></script> <!-- Link to external JavaScript for collapsible sections -->
+</body>
+</html>
