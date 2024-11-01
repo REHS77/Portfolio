@@ -15,7 +15,7 @@
       } else if (!messageInput.value.trim()) {
         alert('Please enter your message.');
       } else {
-        emailjs.send("service_8ohjmek", "template_egk4i1d", {
+        emailjs.send("service_8ohjmek", "template_dgaymmk", {
           from_name: nameInput.value,
           from_email: emailInput.value,
           message: messageInput.value,
