@@ -1,18 +1,29 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
   const sections = document.querySelectorAll('.resume-section');
 
   sections.forEach(section => {
     const title = section.querySelector('.section-title');
     title.addEventListener('click', function() {
-      section.classList.toggle('active');
       const content = section.querySelector('.section-content');
+
+      // Check if the clicked section is already open
+      const isActive = section.classList.contains('active');
       
-      if (section.classList.contains('active')) {
+      // Close all sections
+      sections.forEach(otherSection => {
+        if (otherSection !== section) {
+          otherSection.classList.remove('active');
+          otherSection.querySelector('.section-content').style.maxHeight = '0';
+        }
+      });
+
+      // Toggle the clicked section
+      if (!isActive) {
+        section.classList.add('active');
         content.style.maxHeight = content.scrollHeight + 'px';
       } else {
-        content.style.maxHeight = null;
+        section.classList.remove('active');
+        content.style.maxHeight = '0';
       }
     });
   });
