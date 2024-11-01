@@ -19,7 +19,7 @@ document.querySelector('.nav-right a[href="#linkedin"]').addEventListener('click
       } else if (!messageInput.value.trim()) {
         alert('Please enter your message.');
       } else {
-        emailjs.send("EpxmYcyJl2whh9vzP", "template_egk4i1d", {
+        emailjs.send("service_8ohjmek", "template_egk4i1d", {
           from_name: nameInput.value,
           from_email: emailInput.value,
           message: messageInput.value,
