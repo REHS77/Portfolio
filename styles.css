@@ -195,17 +195,15 @@ footer {
   margin-top: 2rem;
 }
 .hamburger {
-  display: none; 
+  display: none; /* Hidden by default */
   font-size: 1.5rem;
   cursor: pointer;
   color: #ffffff;
 }
 @media (max-width: 768px) {
-  /* Show hamburger on mobile */
   .hamburger {
     display: block;
   }
-
   nav {
     flex-direction: column;
     align-items: center;
@@ -220,12 +218,10 @@ footer {
     gap: 15px;
   }
 
-  /* Show nav items when nav-open is active */
   nav.nav-open .nav-center ul {
     display: flex;
   }
 
-  /* Adjust nav-right alignment */
   nav .nav-right {
     margin-top: 10px;
   }
