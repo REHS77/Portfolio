@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%); 
+  background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
@@ -15,7 +16,7 @@ body {
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-
+/* Navigation Bar */
 nav {
   position: fixed;
   top: 0;
@@ -25,24 +26,24 @@ nav {
   align-items: center;
   padding: 1rem 3rem;
   z-index: 1000;
-  background-color: rgba(31, 28, 44, 0.9); 
+  background-color: rgba(31, 28, 44, 0.9);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-nav .nav-left h1 {
+.nav-left h1 {
   font-size: 2rem;
   color: #ffffff;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
 
-nav .nav-center ul {
+.nav-center ul {
   list-style: none;
   display: flex;
-  gap: 25px; 
+  gap: 25px;
 }
 
-nav .nav-center ul li a {
+.nav-center ul li a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1.1rem;
@@ -50,16 +51,16 @@ nav .nav-center ul li a {
   transition: color 0.3s ease-in-out;
 }
 
-nav .nav-center ul li a:hover {
+.nav-center ul li a:hover {
   color: #928dab;
 }
 
-nav .nav-right {
+.nav-right {
   display: flex;
   align-items: center;
 }
 
-nav .nav-right a {
+.nav-right a {
   color: #ffffff;
   margin-left: 20px;
   font-size: 1.1rem;
@@ -67,18 +68,64 @@ nav .nav-right a {
   transition: color 0.3s ease-in-out;
 }
 
-nav .nav-right .icon {
+.nav-right .icon {
   width: 24px;
   height: 24px;
   margin-left: 15px;
   transition: transform 0.3s ease-in-out;
 }
 
-nav .nav-right .icon:hover {
-  transform: scale(1.2); 
+.nav-right .icon:hover {
+  transform: scale(1.2);
 }
 
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
 
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  /* Hide the menu by default */
+  .menu {
+    display: none;
+  }
+
+  /* Show menu when nav-open is active */
+  nav.nav-open .menu {
+    display: flex; /* Show menu when toggled */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Stack menu items vertically on mobile */
+  .nav-center ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Adjust nav layout for mobile */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-right {
+    margin-top: 10px;
+  }
+}
+
+/* Other Sections */
 .top-section {
   display: flex;
   justify-content: space-between;
@@ -113,17 +160,16 @@ nav .nav-right .icon:hover {
   font-size: 1.4rem;
   margin-top: 1rem;
   line-height: 1.8;
-  color: #dddddd; 
+  color: #dddddd;
   max-width: 600px;
 }
 
-
 .bottom-section {
   padding: 4rem 3rem;
-  background-color: #2f2f2f; 
-  border-top-left-radius: 20px; 
+  background-color: #2f2f2f;
+  border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .intro-section {
@@ -135,7 +181,7 @@ nav .nav-right .icon:hover {
 .intro-section hr {
   border: 1px solid #666666;
   margin-bottom: 1rem;
-  width: 60px; 
+  width: 60px;
 }
 
 .intro-section h3 {
@@ -182,7 +228,7 @@ button:hover {
 }
 
 .card:hover {
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
@@ -193,55 +239,4 @@ footer {
   color: #ffffff;
   font-size: 0.9rem;
   margin-top: 2rem;
-}
-.hamburger {
-  display: none; /* Hidden by default */
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #ffffff;
-}
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  /* Hide nav items initially on mobile */
-  .nav-center ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  nav.nav-open .nav-center ul {
-    display: flex;
-  }
-
-  nav .nav-right {
-    margin-top: 10px;
-  }
-
-  /* Adjust top-section layout for mobile */
-  .top-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 3rem 1rem;
-  }
-
-  .image-container {
-    margin-bottom: 2rem;
-  }
-
-  .main-description {
-    padding-left: 0;
-  }
-
-  .resume-button {
-    padding: 8px 16px; /* Smaller button on mobile */
-  }
 }
