@@ -4,33 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Rashed Alsafadi's IT Portfolio showcasing technical projects, skills, and experience.">
-<meta name="keywords" content="Rashed Alsafadi, IT portfolio, web development, coding projects, JavaScript, HTML, CSS">
-<meta name="author" content="Rashed Alsafadi">
-
+  <meta name="keywords" content="Rashed Alsafadi, IT portfolio, web development, coding projects, JavaScript, HTML, CSS">
+  <meta name="author" content="Rashed Alsafadi">
   <title>Rashed's Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<style>.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 20px; 
-}
+<style>
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+  }
 
-.image-container img {
-  width: 250px; 
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+  .image-container img {
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 </style>
 <body>
   <nav>
     <div class="nav-left">
       <h1>Rashed Alsafadi</h1>
     </div>
+    <!-- Add the hamburger icon here -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="nav-center">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -44,27 +45,29 @@
         <img src="images/linkedin.png" alt="LinkedIn" class="icon">
       </a>
       <a href="https://github.com/REHS77" target="_blank">
-        <img src="images/github.png" alt="GitHub" class="icon"> 
-       <a href="#" class="resume-button">Resume</a>
+        <img src="images/github.png" alt="GitHub" class="icon">
+      </a>
+      <a href="#" class="resume-button">Resume</a>
     </div>
   </nav>
 
   <section class="top-section">
     <div class="image-container">
-        <a><img src="images/Profile.png" class="icon"></a>
+      <a><img src="images/Profile.png" class="icon"></a>
     </div>
     <div class="main-description">
       <h2>Graduate of Frederick University's Master of Science in Web and Smart Systems</h2>
     </div>
   </section>
+  
   <section class="bottom-section">
     <div class="intro-section">
       <hr>
       <h3>Intro</h3>
-      <p>I’ve always been passionate about technology and its potential to create positive change. This interest guided me to pursue a Bachelor’s in Cyber Security at The World Islamic Sciences and Education University and a Master’s in Computer Engineering at Frederick University, where I worked on projects in areas like web development and IoT security. Alongside my technical interests, I’ve developed a growing passion for strategy consulting, which allows me to apply my analytical skills and problem-solving mindset in a broader context. Together, technology and strategy inspire me to find innovative, impactful solutions to real-world challenges.</p>
+      <p>I’ve always been passionate about technology and its potential to create positive change...</p>
     </div>
-    <script src="script.js"></script> 
+  </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
-
