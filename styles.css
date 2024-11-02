@@ -210,8 +210,6 @@ footer {
     align-items: center;
     padding: 1rem;
   }
-
-  /* Hide nav items on mobile by default */
   .nav-center ul {
     display: none;
     flex-direction: column;
@@ -219,8 +217,6 @@ footer {
     gap: 15px;
     width: 100%;
   }
-
-  /* Show nav items when nav-open is active */
   nav.nav-open .nav-center ul {
     display: flex;
     background-color: rgba(31, 28, 44, 0.9); 
