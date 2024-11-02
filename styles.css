@@ -199,17 +199,11 @@ footer {
   color: #ffffff;
 }
 
-/* Updated media query for mobile responsiveness */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .hamburger {
-    display: block;
+    display: block; 
   }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
   .nav-center ul {
     display: none;
     flex-direction: column;
