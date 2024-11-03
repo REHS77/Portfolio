@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const messageInput = document.getElementById('message');
-
   form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
   });
-
   function validateEmail(email) {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);

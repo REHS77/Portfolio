@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
@@ -14,7 +13,6 @@ body {
   transform: translateY(0);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
-
 nav {
   position: fixed;
   top: 0;
@@ -27,20 +25,17 @@ nav {
   background-color: rgba(31, 28, 44, 0.9);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 nav .nav-left h1 {
   font-size: 2rem;
   color: #ffffff;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
-
 .nav-center .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
 }
-
 .nav-center .nav-links li a {
   color: #ffffff;
   text-decoration: none;
@@ -48,16 +43,13 @@ nav .nav-left h1 {
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
-
 .nav-center .nav-links li a:hover {
   color: #928dab;
 }
-
 .nav-right {
   display: flex;
   align-items: center;
 }
-
 .nav-right a {
   color: #ffffff;
   margin-left: 20px;
@@ -65,48 +57,40 @@ nav .nav-left h1 {
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
-
 .nav-right .icon {
   width: 24px;
   height: 24px;
   margin-left: 15px;
   transition: transform 0.3s ease-in-out;
 }
-
 .nav-right .icon:hover {
   transform: scale(1.2);
 }
-
 .top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 6rem 3rem;
 }
-
 .image-container {
   flex: 1;
   text-align: left;
 }
-
 .profile-image {
   width: 300px;
   height: auto;
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 .main-description {
   flex: 2;
   padding-left: 3rem;
 }
-
 .main-description h2 {
   font-size: 3.5rem;
   font-weight: 700;
   color: #ffffff;
 }
-
 .main-description p {
   font-size: 1.4rem;
   margin-top: 1rem;
@@ -199,7 +183,6 @@ footer {
   color: #ffffff;
 }
 
-/* Mobile Styles */
 @media only screen and (max-width: 768px) {
   .nav-left h1 {
     font-size: 1.5rem;
@@ -216,14 +199,14 @@ footer {
   }
 
   .nav-center .nav-links {
-    display: none; /* Hide nav links by default on mobile */
+    display: none; 
     flex-direction: column;
     align-items: center;
     gap: 15px;
     width: 100%;
   }
 
-  /* Show nav links when 'nav-open' is active */
+ 
   nav.nav-open .nav-center .nav-links {
     display: flex;
     background-color: rgba(31, 28, 44, 0.9);
@@ -239,7 +222,7 @@ footer {
   }
 
   .nav-right a {
-    margin: 0 10px; /* Adjust spacing for social icons */
+    margin: 0 10px; 
   }
 
   .top-section {
