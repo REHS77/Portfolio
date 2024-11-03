@@ -16,7 +16,7 @@ body {
 }
 
 nav {
-  position: fixed;
+  position: flex;
   top: 0;
   width: 100%;
   display: flex;
@@ -192,8 +192,13 @@ footer {
   margin-top: 2rem;
 }
 
+.nav-center .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px; 
+}
 .hamburger {
-  display: none; 
+  display: none;
   font-size: 1.5rem;
   cursor: pointer;
   color: #ffffff;
@@ -203,7 +208,19 @@ footer {
   .hamburger {
     display: block;
   }
-
+  .nav-center .nav-links {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+nav.nav-open .nav-links {
+  display: flex;
+  background-color: rgba(31, 28, 44, 0.9); 
+  padding: 1rem;
+  border-radius: 10px;
+}
    .nav-center ul {
     display: none;
     flex-direction: column;
@@ -218,7 +235,7 @@ footer {
     gap: 15px;
     width: 100%;
   }
-  .nav-center ul {
+ .nav-center ul {
     display: none;
     flex-direction: column;
     align-items: center;
