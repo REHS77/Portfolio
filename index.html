@@ -10,6 +10,65 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav {
+  position: relative; 
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  background-color: rgba(31, 28, 44, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+  nav .nav-left h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  nav .nav-center ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  nav .nav-center ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+
+  nav .nav-center ul li a:hover {
+    color: #928dab; 
+  }
+
+  nav .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  nav .nav-right .icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav .nav-right .icon:hover {
+    transform: scale(1.2); 
+  }
+
   .image-container {
     display: flex;
     justify-content: center;
