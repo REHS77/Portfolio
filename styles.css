@@ -201,18 +201,29 @@ footer {
 
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
+  .nav-left h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+
   .hamburger {
     display: block;
   }
 
   .nav-center .nav-links {
-    display: none; 
+    display: none; /* Hide nav links by default on mobile */
     flex-direction: column;
     align-items: center;
     gap: 15px;
     width: 100%;
   }
 
+  /* Show nav links when 'nav-open' is active */
   nav.nav-open .nav-center .nav-links {
     display: flex;
     background-color: rgba(31, 28, 44, 0.9);
@@ -221,9 +232,14 @@ footer {
   }
 
   .nav-right {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-right a {
+    margin: 0 10px; /* Adjust spacing for social icons */
   }
 
   .top-section {
