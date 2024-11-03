@@ -199,11 +199,18 @@ footer {
   color: #ffffff;
 }
 
-@media only screen and (min-width: 768) {
+@media only screen and (max-width: 768px) {
   .hamburger {
-    display: block; 
+    display: block;
   }
 
+   .nav-center ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
   .nav-center ul {
     display: none;
     flex-direction: column;
@@ -211,6 +218,14 @@ footer {
     gap: 15px;
     width: 100%;
   }
+  .nav-center ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
   nav.nav-open .nav-center ul {
     display: flex;
     background-color: rgba(31, 28, 44, 0.9); 
