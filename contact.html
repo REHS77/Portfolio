@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Rashed's Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
+<style>
 
     .contact-section {
       padding: 6rem 2rem;
@@ -110,26 +110,27 @@
   </style>
 </head>
 <body>
-
   <nav>
     <div class="nav-left">
       <h1>Rashed Alsafadi</h1>
     </div>
     <div class="nav-center">
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
     <div class="nav-right">
       <a href="https://www.linkedin.com/in/rashed-alsafadi/" target="_blank">
         <img src="images/linkedin.png" alt="LinkedIn" class="icon">
       </a>
       <a href="https://github.com/REHS77" target="_blank">
-        <img src="images/github.png" alt="GitHub" class="icon"> 
-              <a href="#" class="resume-button">Resume</a>
+        <img src="images/github.png" alt="GitHub" class="icon">
+      </a>
+      <a href="#" class="resume-button">Resume</a>
     </div>
   </nav>
 
@@ -138,7 +139,6 @@
       <h2>Contact Me</h2>
       <p>Feel free to reach out through the form below or email me directly at <a href="mailto:rashedsafadii7@gmail.com">rashedsafadii7@gmail.com</a>.</p>
     </div>
-
     <form class="contact-form" id="contact-form">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -156,9 +156,9 @@
   <script type="text/javascript">    (function() {
       emailjs.init("tDp_jXqN_HfdZ-Gp3"); })();
   </script>
-    <footer>
-      <p>© 2024 Rashed's Portfolio. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>© 2024 Rashed's Portfolio. All rights reserved.</p>
+  </footer>
   <script src="contact.js"></script>
 </body>
 </html>
