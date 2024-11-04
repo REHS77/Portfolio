@@ -37,4 +37,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    if (grecaptcha.getResponse() === "") {
+        event.preventDefault(); // Stop form submission
+        alert("Please complete the reCAPTCHA to submit the form.");
+    }
+});
 });
