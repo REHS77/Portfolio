@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('nav-open');
+    console.log("Hamburger clicked, nav-open class toggled:", nav.classList.contains('nav-open'));
+  }
   const form = document.querySelector('.contact-form');
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
