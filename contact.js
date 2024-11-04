@@ -1,16 +1,18 @@
-function toggleMenu() {
-  const nav = document.querySelector('nav');
-  nav.classList.toggle('nav-open');
-  console.log("Hamburger clicked, nav-open class toggled:", nav.classList.contains('nav-open'));
-}
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.querySelector('.contact-form');
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const messageInput = document.getElementById('message');
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
 
+  form.addEventListener('submit', function(event) {
+    // Check if reCAPTCHA is completed before proceeding
+    if (typeof grecaptcha !== "undefined" && grecaptcha.getResponse() === "") {
+      event.preventDefault(); // Stop form submission
+      alert("Please complete the reCAPTCHA to submit the form.");
+      return;
+    }
+
+    // Basic validation for form fields
     if (!nameInput.value.trim()) {
       alert('Please enter your name.');
     } else if (!emailInput.value.trim() || !validateEmail(emailInput.value)) {
@@ -18,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (!messageInput.value.trim()) {
       alert('Please enter your message.');
     } else {
+      event.preventDefault(); // Stop form from submitting automatically
+
+      // Send email using EmailJS
       emailjs.send("service_8ohjmek", "template_egk4i1d", {
         from_name: nameInput.value,
         from_email: emailInput.value,
@@ -26,21 +31,17 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(function(response) {
         console.log('SUCCESS!', response);
         alert('Message sent successfully!');
-        form.reset(); 
+        form.reset();
+        grecaptcha.reset(); 
       }, function(error) {
-        console.error('FAILED...', error); 
+        console.error('FAILED...', error);
         alert('Failed to send the message. Please try again later.');
       });
     }
   });
+
   function validateEmail(email) {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    if (grecaptcha.getResponse() === "") {
-        event.preventDefault(); // Stop form submission
-        alert("Please complete the reCAPTCHA to submit the form.");
-    }
-});
 });
