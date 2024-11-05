@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const messageInput = document.getElementById('message');
 
   form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
     if (typeof grecaptcha !== "undefined" && grecaptcha.getResponse() === "") {
-      event.preventDefault(); 
       alert("Please complete the reCAPTCHA to submit the form.");
       return;
     }
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (!messageInput.value.trim()) {
       alert('Please enter your message.');
     } else {
-      event.preventDefault(); 
       emailjs.send("service_8ohjmek", "template_egk4i1d", {
         from_name: nameInput.value,
         from_email: emailInput.value,
@@ -33,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(function(response) {
         console.log('SUCCESS!', response);
         alert('Message sent successfully!');
-        form.reset();
-        grecaptcha.reset();
+        form.reset(); 
+        grecaptcha.reset(); 
       }, function(error) {
         console.error('FAILED...', error);
         alert('Failed to send the message. Please try again later.');
