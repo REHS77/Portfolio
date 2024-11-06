@@ -1,3 +1,6 @@
+// Ensure DOMPurify is loaded in your HTML file with this line in <head>:
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js"></script>
+
 document.addEventListener("DOMContentLoaded", function() {
   function toggleMenu() {
     const nav = document.querySelector('nav');
@@ -24,17 +27,17 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (!messageInput.value.trim()) {
       alert('Please enter your message.');
     } else {
-      emailjs.send("service_8ohjmek", "template_egk4i1d", {
-        from_name: nameInput.value,
-        from_email: emailInput.value,
-        message: messageInput.value,
-      })
+      const sanitizedData = {
+        from_name: DOMPurify.sanitize(nameInput.value.trim()),
+        from_email: DOMPurify.sanitize(emailInput.value.trim()),
+        message: DOMPurify.sanitize(messageInput.value.trim()),
+      };
+      emailjs.send("service_8ohjmek", "template_egk4i1d", sanitizedData)
       .then(function(response) {
         console.log('SUCCESS!', response);
         alert('Message sent successfully!');
         form.reset(); 
-        grecaptcha.reset(); 
-      }, function(error) {
+        if (typeof grecaptcha !== "undefined") grecaptcha.reset();
         console.error('FAILED...', error);
         alert('Failed to send the message. Please try again later.');
       });
