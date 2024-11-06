@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log('SUCCESS!', response);
         alert('Message sent successfully!');
         form.reset(); 
-        if (typeof grecaptcha !== "undefined") grecaptcha.reset(); 
+        if (typeof grecaptcha !== "undefined") grecaptcha.reset();
       })
-      .catch(function(error) {
-        console.error('FAILED...', error);
+      .catch(function(err) {
+        console.error('FAILED...', err);
         alert('Failed to send the message. Please try again later.');
       });
     }
