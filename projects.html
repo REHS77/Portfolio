@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,66 +6,66 @@
   <title>Rashed's Projects</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js"></script>
-  </head>
-  <style>
-      * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+</head>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  nav {
-  position: relative; 
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-  z-index: 1000;
-  background-color: rgba(31, 28, 44, 0.9);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+    nav {
+      position: relative; 
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      z-index: 1000;
+      background-color: rgba(31, 28, 44, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-  nav .nav-left h1 {
-    font-size: 2rem;
-    color: #ffffff;
-    font-weight: 700;
-  }
+    nav .nav-left h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      font-weight: 700;
+    }
 
-  nav .nav-center ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-  }
+    nav .nav-center ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
 
-  nav .nav-center ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-  }
+    nav .nav-center ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+    }
 
-  nav .nav-center ul li a:hover {
-    color: #928dab; 
-  }
+    nav .nav-center ul li a:hover {
+      color: #928dab; 
+    }
 
-  nav .nav-right {
-    display: flex;
-    align-items: center;
-  }
+    nav .nav-right {
+      display: flex;
+      align-items: center;
+    }
 
-  nav .nav-right .icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 15px;
-    transition: transform 0.3s ease-in-out;
-  }
+    nav .nav-right .icon {
+      width: 24px;
+      height: 24px;
+      margin-left: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
 
-  nav .nav-right .icon:hover {
-    transform: scale(1.2); 
-  }
+    nav .nav-right .icon:hover {
+      transform: scale(1.2); 
+    }
 
     * {
       margin: 0;
@@ -82,7 +81,6 @@
       padding-top: 80px; 
     }
 
- 
     nav {
       position: fixed;
       top: 0;
@@ -166,8 +164,9 @@
     }
 
     .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 2rem;
     }
 
@@ -177,6 +176,8 @@
       padding: 2rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      width: 100%;
+      max-width: 500px; /* Limit maximum width for single project */
     }
 
     .project-card:hover {
@@ -269,26 +270,13 @@
   <section class="projects-section main-container">
     <h2>My Projects</h2>
     <div class="projects-grid">
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project One Title</h3>
-        <p>A short description of this project and the technologies used.</p>
-        <a href="https://github.com/your-username/project1" target="_blank">View on GitHub</a>
-      </div>
 
       <div class="project-card">
-        <img src="project2.jpg" alt="Project 2">
+        <img src="images/project.jpg" alt="Project 2">
         <h3>Personal Budget Tracker</h3>
-        <p>A short description of this project and the technologies used.</p>
+        <p>A responsive and interactive budget tracker that lets users manage expenses, view transaction summaries, and toggle dark mode. Built with HTML, CSS, JavaScript, and Chart.js for visual data representation.</p>
         <a href="https://rehs77.github.io/PBT/" target="_blank">View on GitHub</a>
         </div>
-
-      <div class="project-card">
-        <img src="project3.jpg" alt="Project 3">
-        <h3>Project Three Title</h3>
-        <p>A short description of this project and the technologies used.</p>
-        <a href="https://github.com/your-username/project3" target="_blank">View on GitHub</a>
-      </div>
     </div>
   </section>
 
